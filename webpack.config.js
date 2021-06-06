@@ -5,13 +5,20 @@ module.exports = {
     app: ['./src/index.js']
   },
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        'css-loader',
-      ],
-    }],
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        loader: require.resolve('babel-loader'),
+        test: /\.js$|jsx/,
+        exclude: /node_modules/
+      }
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'build'),

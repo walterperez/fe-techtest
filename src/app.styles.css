@@ -1,0 +1,10 @@
+.app-wrapper {
+    padding: 2rem 1rem;
+    background-color: rgb(0, 145, 255);
+}
+
+.app-title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+}
